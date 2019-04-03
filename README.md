@@ -1,4 +1,4 @@
-# 🐯Pokemon-App [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+# 🐯Pokemon-App [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) [![Build Status](https://travis-ci.com/JideGuru/Pokemon-App.svg?branch=master)](https://travis-ci.com/JideGuru/Pokemon-App)
 
 Pokemon App with animations, beautiful UI and network call.
 
