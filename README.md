@@ -4,6 +4,8 @@ Pokemon App with animations, beautiful UI and network call.
 
 ## 📸 ScreenShots
 <img src="screenshots/1.jpg" width="250">  <img src="screenshots/2.jpg" width="250">
+<img src="screenshots/https://raw.githubusercontent.com/iampawan/PokemonApp/master/ss.png" width="250">
+
 
 ## ✨ Requirements
 * Any Operating System (ie. MacOS X, Linux, Windows)

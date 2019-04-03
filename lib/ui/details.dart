@@ -112,6 +112,7 @@ class _DetailsState extends State<Details> {
               color: Colors.white
           ),
         ),
+        centerTitle: true,
         iconTheme: IconThemeData(
             color: Colors.white
         ),
