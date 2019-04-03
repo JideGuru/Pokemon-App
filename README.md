@@ -3,8 +3,8 @@
 Pokemon App with animations, beautiful UI and network call.
 
 ## 📸 ScreenShots
-<img src="screenshots/1.jpg" width="250">  <img src="screenshots/2.jpg" width="250">
-<img src="https://raw.githubusercontent.com/iampawan/PokemonApp/master/ss.png" width="250">
+<img src="screenshots/1.jpg" width="400">  <img src="screenshots/2.jpg" width="400">
+<img src="https://raw.githubusercontent.com/iampawan/PokemonApp/master/ss.png" width="450">
 
 
 ## ✨ Requirements
