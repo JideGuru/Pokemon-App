@@ -1,16 +1,28 @@
-# pokemon_app
+# 🐯Pokemon-App [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
-A new Flutter application.
+Pokemon App with animations, beautiful UI and network call.
 
-## Getting Started
+## 📸 ScreenShots
+<img src="screenshots/1.jpg" width="250">  <img src="screenshots/2.jpg" width="250">
 
-This project is a starting point for a Flutter application.
+## ✨ Requirements
+* Any Operating System (ie. MacOS X, Linux, Windows)
+* Any IDE with Flutter SDK installed (ie. IntelliJ, Android Studio, VSCode etc)
+* A little knowledge of Dart and Flutter
+* A brain to think 🤓🤓
 
-A few resources to get you started if this is your first Flutter project:
+## ⚡️ Disclaimer
+Major parts of this app was made by following this [Youtube Tutorial](https://youtu.be/yeXJqZCiwTQ), i only:
+1. Added a search feature.
+2. Fixed a bug.
+3. Added Travis CI.
 
-- [Lab: Write your first Flutter app](https://flutter.io/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.io/docs/cookbook)
+## 🤓 Author(s)
+**Olusegun Festus Babajide**
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.io/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+
+## 😎 Contributors
+**404 Not Found.**
+
+Pull Requests are welcome if you fix any issues,
+you can also open an issue.
