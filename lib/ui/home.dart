@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:pokemon_app/model/pokemon.dart';
 import 'package:pokemon_app/ui/details.dart';
+import 'package:pokemon_app/ui/search.dart';
 
 class Home extends StatefulWidget {
   final String header;
@@ -65,8 +66,13 @@ class _HomeState extends State<Home> {
 
           IconButton(
             icon: Icon(Icons.search),
-            onPressed: () => debugPrint("1PRESSED!!!"),
             color: Colors.white,
+              onPressed: (){
+                showSearch(
+                  context: context,
+                  delegate: PokeSearch(pokeHub: pokeHub),
+                );
+              }
           )
         ],
 
@@ -78,7 +84,7 @@ class _HomeState extends State<Home> {
       body: pokeHub == null
           ? Center(
         child: CircularProgressIndicator(
-          backgroundColor: Colors.cyan,
+          valueColor: new AlwaysStoppedAnimation<Color>(Colors.cyan),
         ),
       )
           : GridView.count(
