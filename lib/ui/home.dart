@@ -56,13 +56,13 @@ class _HomeState extends State<Home> {
         ),
 
         actions: <Widget>[
-//          IconButton(
-//              icon:Icon(
-//                Icons.info_outline,
-//                color: Colors.white,
-//              ),
-//              onPressed: () => _showAlertInfo(context)
-//          ),
+          IconButton(
+              icon:Icon(
+                Icons.info_outline,
+                color: Colors.white,
+              ),
+              onPressed: () => _showAlertInfo(context)
+          ),
 
           IconButton(
             icon: Icon(Icons.search),
