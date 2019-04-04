@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
-import 'dart:async';
-import 'dart:convert';
 
 import 'package:pokemon_app/model/pokemon.dart';
 import 'package:pokemon_app/ui/details.dart';
@@ -62,7 +59,10 @@ class PokeSearch extends SearchDelegate {
     }
 
 
-    var poko = pokeHub.pokemon.where((pokee)=> pokee.name.contains(query)).toList();
+    //Search in the json for the query entered
+    var poko = pokeHub.pokemon.where(
+            (pokee)=> pokee.name.contains(query)
+    ).toList();
 
     return poko == null
         ? Center(
