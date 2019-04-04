@@ -13,11 +13,13 @@ Pokemon App with animations, beautiful UI and network call.
 * A little knowledge of Dart and Flutter
 * A brain to think 🤓🤓
 
+
 ## ⚡️ Disclaimer
 Major parts of this app was made by following this [Youtube Tutorial](https://youtu.be/yeXJqZCiwTQ), i only:
 1. Added a search feature.
 2. Fixed a bug.
 3. Added Travis CI.
+
 
 ## 🤓 Author(s)
 **Olusegun Festus Babajide**

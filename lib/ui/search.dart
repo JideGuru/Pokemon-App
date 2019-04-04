@@ -58,10 +58,16 @@ class PokeSearch extends SearchDelegate {
       );
     }
 
+    var query1;
+    var query2 = " ";
+    if(query.length != 0){
+      query1 = query.toLowerCase();
+      query2 = query1[0].toUpperCase() + query1.substring(1);
+    }
 
     //Search in the json for the query entered
     var poko = pokeHub.pokemon.where(
-            (pokee)=> pokee.name.contains(query)
+            (pokee)=> pokee.name.startsWith(query2)
     ).toList();
 
     return poko == null
@@ -116,9 +122,16 @@ class PokeSearch extends SearchDelegate {
   @override
   Widget buildSuggestions(BuildContext context) {
 
-//    if(pokeHub.pokemon.where((pokee)=> pokee.name.contains(query)=>print(pokee)).toList() == true)
+    var query1;
+    var query2 = " ";
+    if(query.length != 0){
+      query1 = query.toLowerCase();
+      query2 = query1[0].toUpperCase() + query1.substring(1);
+    }
 
-    var poko = pokeHub.pokemon.where((pokee)=> pokee.name.contains(query)).toList();
+    var poko = pokeHub.pokemon.where(
+            (pokee)=> pokee.name.startsWith(query2)
+    ).toList();
 
     return poko == null
         ? Center(
