@@ -20,6 +20,7 @@ class _HomeState extends State<Home> {
       "https://raw.githubusercontent.com/Biuni/PokemonGO-Pokedex/master/pokedex.json";
 
   PokeHub pokeHub;
+  bool _loading = true;
 
   @override
   void initState() {
@@ -29,11 +30,16 @@ class _HomeState extends State<Home> {
   }
 
   fetchData() async {
+    setState(() {
+      _loading = true;
+    });
     var res = await http.get(url);
     var decodedJson = jsonDecode(res.body);
     pokeHub = PokeHub.fromJson(decodedJson);
     print(pokeHub.toJson());
-    setState(() {});
+    setState(() {
+      _loading = false;
+    });
   }
 
   @override
@@ -69,7 +75,7 @@ class _HomeState extends State<Home> {
         ],
       ),
 
-      body: pokeHub == null
+      body: _loading
           ? Center(
               child: CircularProgressIndicator(
                 valueColor: new AlwaysStoppedAnimation<Color>(Colors.cyan),
@@ -119,7 +125,9 @@ class _HomeState extends State<Home> {
             ),
       //FAB
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          fetchData();
+        },
         backgroundColor: Colors.cyan,
         child: Icon(Icons.refresh),
       ),
