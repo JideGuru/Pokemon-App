@@ -58,12 +58,6 @@ class _HomeState extends State<Home> {
         iconTheme: IconThemeData(color: Colors.white),
         actions: <Widget>[
           IconButton(
-              icon: Icon(
-                Icons.info_outline,
-                color: Colors.white,
-              ),
-              onPressed: () => _showAlertInfo(context)),
-          IconButton(
               icon: Icon(Icons.search),
               color: Colors.white,
               onPressed: () {
@@ -73,6 +67,28 @@ class _HomeState extends State<Home> {
                 );
               })
         ],
+      ),
+
+      drawer: Drawer(
+        child: ListView(
+          children: <Widget>[
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: ListTile(
+                title: Text("Pokemon DB",
+                    style:
+                        TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold)),
+              ),
+            ),
+            ListTile(
+              onTap: () {
+                _showAlertInfo(context);
+              },
+              title: Text("About"),
+              leading: Icon(Icons.info),
+            ),
+          ],
+        ),
       ),
 
       body: _loading
