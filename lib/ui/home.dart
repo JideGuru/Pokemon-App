@@ -16,7 +16,8 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  var url = "https://raw.githubusercontent.com/Biuni/PokemonGO-Pokedex/master/pokedex.json";
+  var url =
+      "https://raw.githubusercontent.com/Biuni/PokemonGO-Pokedex/master/pokedex.json";
 
   PokeHub pokeHub;
 
@@ -35,8 +36,6 @@ class _HomeState extends State<Home> {
     setState(() {});
   }
 
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -50,86 +49,74 @@ class _HomeState extends State<Home> {
             color: Colors.white,
           ),
         ),
-
-        iconTheme: IconThemeData(
-            color: Colors.white
-        ),
-
+        iconTheme: IconThemeData(color: Colors.white),
         actions: <Widget>[
           IconButton(
-              icon:Icon(
+              icon: Icon(
                 Icons.info_outline,
                 color: Colors.white,
               ),
-              onPressed: () => _showAlertInfo(context)
-          ),
-
+              onPressed: () => _showAlertInfo(context)),
           IconButton(
-            icon: Icon(Icons.search),
-            color: Colors.white,
-              onPressed: (){
+              icon: Icon(Icons.search),
+              color: Colors.white,
+              onPressed: () {
                 showSearch(
                   context: context,
                   delegate: PokeSearch(pokeHub: pokeHub),
                 );
-              }
-          )
+              })
         ],
-
       ),
-
-      //Drawer
-      drawer: Drawer(),
 
       body: pokeHub == null
           ? Center(
-        child: CircularProgressIndicator(
-          valueColor: new AlwaysStoppedAnimation<Color>(Colors.cyan),
-        ),
-      )
-          : GridView.count(
-        crossAxisCount: 2,
-        children: pokeHub.pokemon
-            .map((poke) => Padding(
-          padding: const EdgeInsets.all(2.0),
-          child: InkWell(
-            onTap: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => Details(
-                        pokemon: poke,
-                      )));
-            },
-            child: Hero(
-              tag: poke.img,
-              child: Card(
-                child: Column(
-                  mainAxisAlignment:
-                  MainAxisAlignment.spaceEvenly,
-                  children: <Widget>[
-                    Container(
-                      height: 100.0,
-                      width: 100.0,
-                      decoration: BoxDecoration(
-                          image: DecorationImage(
-                              image: NetworkImage(poke.img))),
-                    ),
-                    Text(
-                      poke.name,
-                      style: TextStyle(
-                        fontSize: 20.0,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    )
-                  ],
-                ),
+              child: CircularProgressIndicator(
+                valueColor: new AlwaysStoppedAnimation<Color>(Colors.cyan),
               ),
+            )
+          : GridView.count(
+              crossAxisCount: 2,
+              children: pokeHub.pokemon
+                  .map((poke) => Padding(
+                        padding: const EdgeInsets.all(2.0),
+                        child: InkWell(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => Details(
+                                          pokemon: poke,
+                                        )));
+                          },
+                          child: Card(
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: <Widget>[
+                                Hero(
+                                  tag: poke.img,
+                                  child: Container(
+                                    height: 100.0,
+                                    width: 100.0,
+                                    decoration: BoxDecoration(
+                                        image: DecorationImage(
+                                            image: NetworkImage(poke.img))),
+                                  ),
+                                ),
+                                Text(
+                                  poke.name,
+                                  style: TextStyle(
+                                    fontSize: 20.0,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                      ))
+                  .toList(),
             ),
-          ),
-        ))
-            .toList(),
-      ),
       //FAB
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
@@ -140,20 +127,20 @@ class _HomeState extends State<Home> {
   }
 
   //Function to Show Alert Dialog for showing app details
-  void _showAlertInfo(BuildContext context){
+  void _showAlertInfo(BuildContext context) {
     var alert = new AlertDialog(
       title: Text("Info"),
       content: Text("Made With Flutter by JideGuru"),
-
       actions: <Widget>[
-
         FlatButton(
-          onPressed: (){Navigator.pop(context);},
+          onPressed: () {
+            Navigator.pop(context);
+          },
           child: Text("OK"),
         )
       ],
     );
 
-    showDialog(context: context, builder: (context)=> alert);
+    showDialog(context: context, builder: (context) => alert);
   }
 }
