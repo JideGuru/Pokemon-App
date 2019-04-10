@@ -26,7 +26,7 @@ Major parts of this app was made by following this [Youtube Tutorial](https://yo
 
 
 ## 😎 Contributors
-**404 Not Found.**
+1. [ATholin](https://github.com/ATholin)
 
 Pull Requests are welcome if you fix any issues,
 you can also open an issue.
